@@ -1,0 +1,248 @@
+.sp-page { padding: 32px 0 80px; }
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-bottom: 32px;
+}
+.breadcrumb a { color: var(--gray-400); transition: color var(--transition); }
+.breadcrumb a:hover { color: var(--primary); }
+.breadcrumb span:last-child { color: var(--gray-600); }
+
+.sp-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Gallery */
+.sp-gallery__main {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--gray-50);
+  aspect-ratio: 3/4;
+}
+.sp-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sp-discount-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--accent);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+.sp-gallery__thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.sp-thumb {
+  width: 70px;
+  height: 90px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  transition: border-color var(--transition);
+}
+.sp-thumb.active { border-color: var(--accent); }
+.sp-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Details */
+.sp-category {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 8px;
+}
+.sp-name {
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 400;
+  color: var(--primary);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.sp-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.sp-rating-text { font-size: 13px; color: var(--gray-400); }
+
+.sp-price {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.sp-price-current { font-size: 28px; font-weight: 600; color: var(--primary); }
+.sp-price-compare { font-size: 18px; color: var(--gray-400); text-decoration: line-through; }
+.sp-price-saving {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--success);
+  background: rgba(45,106,79,0.08);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.sp-variant-group { margin-bottom: 20px; }
+.sp-variant-label { font-size: 13px; color: var(--gray-600); margin-bottom: 10px; }
+.sp-variant-label strong { color: var(--primary); }
+.sp-variant-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.sp-variant-btn {
+  padding: 8px 16px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--gray-600);
+  background: var(--white);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.sp-variant-btn:hover { border-color: var(--primary); color: var(--primary); }
+.sp-variant-btn.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+.sp-qty-row { display: flex; gap: 16px; align-items: center; margin-bottom: 14px; }
+.sp-qty-control {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.sp-qty-control button {
+  width: 38px;
+  height: 44px;
+  background: var(--gray-50);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--gray-600);
+  transition: background var(--transition);
+}
+.sp-qty-control button:hover { background: var(--gray-100); }
+.sp-qty-control span {
+  width: 44px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+.sp-add-btn { flex: 1; }
+
+.sp-low-stock {
+  font-size: 13px;
+  color: var(--error);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.sp-trust {
+  padding: 18px 0;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sp-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--gray-600);
+}
+.sp-trust-item span:first-child { font-size: 16px; }
+
+.sp-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: 20px;
+}
+.sp-tab {
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--gray-400);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-bottom: -1px;
+}
+.sp-tab.active { color: var(--primary); border-bottom-color: var(--accent); }
+.sp-tab:hover { color: var(--primary); }
+
+.sp-tab-content {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--gray-600);
+}
+.sp-detail-list { list-style: none; }
+.sp-detail-list li { padding: 6px 0; border-bottom: 1px solid var(--gray-100); font-size: 14px; }
+
+.sp-reviews { display: flex; flex-direction: column; gap: 16px; }
+.sp-no-reviews { color: var(--gray-400); font-style: italic; }
+.sp-review {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+.sp-review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.sp-review-author { font-weight: 600; font-size: 14px; }
+.sp-review-text { font-size: 14px; color: var(--gray-600); margin-bottom: 4px; }
+.sp-review-date { font-size: 12px; color: var(--gray-400); }
+
+.sp-review-form { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--gray-200); }
+.sp-review-form h4 { font-family: var(--font-heading); font-size: 18px; margin-bottom: 14px; }
+.sp-star-select { display: flex; gap: 6px; margin-bottom: 12px; }
+.sp-star-select button {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+.star-filled { color: var(--accent); }
+.star-empty { color: var(--gray-200); }
+.sp-star-select button:hover { transform: scale(1.2); }
+.sp-review-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+  margin-bottom: 12px;
+}
+.sp-review-form textarea:focus { border-color: var(--accent); }
+
+@media (max-width: 900px) {
+  .sp-layout { grid-template-columns: 1fr; gap: 32px; }
+}

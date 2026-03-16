@@ -8,7 +8,7 @@
     "seed": "cd backend && npm run seed",
     "start:backend": "cd backend && npm start",
     "start:frontend": "cd frontend && npm start",
-    "nodemon": "cd backend && nodemon server.js"
+    "start": "node backend/server.js"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

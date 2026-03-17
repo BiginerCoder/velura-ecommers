@@ -8,7 +8,9 @@ const generateToken = (id) =>
 // POST /api/auth/register
 const register = async (req, res) => {
   try {
+    console.log("Received registration data:", req.body);
     const { firstName, lastName, email, password, phoneNumber } = req.body;
+    console.log("Registering user:", { firstName, lastName, email, phoneNumber, password });
     if (!firstName || !lastName || !email || !password) {
       return res.status(400).json({ message: "All fields are required" });
     }
@@ -28,6 +30,7 @@ const register = async (req, res) => {
       lastName: user.lastName,
       email: user.email,
       role: user.role,
+      cartId: cart._id,
       token: generateToken(user._id),
     });
   } catch (error) {

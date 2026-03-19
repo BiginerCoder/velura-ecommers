@@ -15,8 +15,8 @@ const adminRoutes   = require("./routes/adminRoutes");
 connectDB();
 
 const app = express();
-
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+const allowOrigin = "https://velura-frontend.netlify.app";
+app.use(cors({ origin: allowOrigin, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

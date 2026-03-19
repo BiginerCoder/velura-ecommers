@@ -69,6 +69,7 @@ const Products = () => {
   return (
     <div className="page-wrapper">
       <div className="products-page container">
+        
         {/* Page header */}
         <div className="products-header">
           <div>

@@ -25,6 +25,7 @@ export const CartProvider = ({ children }) => {
   useEffect(() => { fetchCart(); }, [fetchCart]);
 
   const addToCart = async (productId, quantity = 1, selectedVariants = {}) => {
+    console.log("api", api.defaults.baseURL);
     const { data } = await api.post("/cart/add", { productId, quantity, selectedVariants });
     setCart(data);
     return data;

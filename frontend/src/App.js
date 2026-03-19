@@ -20,6 +20,7 @@ import NotFound from "./pages/NotFound";
 import "./styles/global.css";
 
 const App = () => {
+  console.log("API URL:", import.meta.env.VITE_API_URL);
   return (
     <BrowserRouter>
       <AuthProvider>
@@ -70,7 +71,7 @@ const App = () => {
             {/* Fallback */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-
+          
           <Footer />
         </CartProvider>
       </AuthProvider>

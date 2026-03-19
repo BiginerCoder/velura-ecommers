@@ -4,8 +4,10 @@ import axios from "axios";
 //   baseURL: "/api",
 // });
 const api = axios.create({
-  baseURL: "https://your-backend-url.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_URL,
 });
+
+console.log("API base URL:", api.defaults.baseURL);
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");

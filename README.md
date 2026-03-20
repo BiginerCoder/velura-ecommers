@@ -5,6 +5,8 @@ A fully converted MERN stack eCommerce application. Originally built with React 
 **Niche:** Fashion & Clothing — Brand name: **Velura**
 
 ---
+## deployment link
+https://deploy-preview-1--velura-frontend.netlify.app/
 
 ## Tech Stack
 
@@ -225,17 +227,3 @@ npm run dev
 | `FLAT15` | 15% off |
 
 ---
-
-## Key Differences from Original (Spring Boot → Node.js)
-
-| Original | MERN Conversion |
-|----------|-----------------|
-| Spring Boot + JPA | Express.js + Mongoose |
-| MySQL relational DB | MongoDB document DB |
-| Spring Security + Basic Auth | JWT middleware (protect/adminOnly) |
-| Java DTOs | Plain JS objects / Mongoose lean() |
-| `http://127.0.0.1:8080/ecom/...` | `http://localhost:5000/api/...` |
-| Hard-coded alert() dialogs | react-hot-toast notifications |
-| Per-file inline CSS | Design token system (CSS variables) |
-| JioMart placeholder images | Unsplash fashion product images |
-| VeggieMart (grocery) niche | Velura (fashion/clothing) niche |

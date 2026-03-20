@@ -20,7 +20,6 @@ import NotFound from "./pages/NotFound";
 import "./styles/global.css";
 
 const App = () => {
-  console.log("API URL:", import.meta.env.VITE_API_URL);
   return (
     <BrowserRouter>
       <AuthProvider>

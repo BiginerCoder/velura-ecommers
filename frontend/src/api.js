@@ -4,10 +4,10 @@ import axios from "axios";
 //   baseURL: "/api",
 // });
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: process.env.VITE_API_URL,
 });
 
-console.log("API base URL:", api.defaults.baseURL);
+console.log("API base URL:", api);
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
